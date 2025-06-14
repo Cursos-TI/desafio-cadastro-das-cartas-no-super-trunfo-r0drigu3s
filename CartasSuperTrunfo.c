@@ -7,12 +7,13 @@
 //Teste larissa
 
 int main() {
+
     // Sugestão: Defina variáveis separadas para cada atributo da cidade.
     // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
 
-     char estado, estado2, codigo[4], codigo2[4], cidade[20], cidade2[20];
-     float area, area2, pib, pib2;
-     int populacao, populacao2, pontos, pontos2;
+    char estado, estado2, codigo[4], codigo2[4], cidade[20], cidade2[20];
+    int populacao, populacao2, pontos, pontos2;
+    float area, area2, pib, pib2, densidade, densidade2, pibpercapita, pibpercapita2;
 
     // Cadastro das Cartas:
     // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
@@ -65,6 +66,11 @@ int main() {
     printf("Número de Pontos Turísticos: ");
     scanf("%d", &pontos2);
 
+    densidade = populacao / area;
+    densidade2 = populacao2 / area2;
+    pibpercapita = (float) populacao / pib;
+    pibpercapita2 = (float) populacao2 / pib2;
+
     // Exibição dos Dados das Cartas:
     // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
     // Exiba os valores inseridos para cada atributo da cidade, um por linha.
@@ -77,6 +83,8 @@ int main() {
     printf("Àrea: %.2f km²\n", area),
     printf("PIB: %.2f Bilhões de Reais\n", pib);
     printf("Número de Pontos Turísticos: %d\n", pontos);
+    printf("Densidade Populacional: %.2f hab/km²\n", densidade);
+    printf("PIB per Capita: %.2f reais\n", pibpercapita);
 
 
     printf("\nCarta:2\n");
@@ -87,6 +95,8 @@ int main() {
     printf("Àrea: %.2f km²\n", area2),
     printf("PIB: %.2f Bilhões de Reais\n", pib2);
     printf("Número de Pontos Turísticos: %d\n", pontos2);
+    printf("Densidade Populacional: %.2f hab/km²\n", densidade2);
+    printf("PIB per Capita: %.2f reais\n", pibpercapita2);
 
     return 0;
 }
